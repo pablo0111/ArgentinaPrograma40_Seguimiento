@@ -1,0 +1,4 @@
+Hola este es un texto para codificar
+Esto es la segunda linea
+Esto es la tercer linea
+No funcionan ni comas ni acentos ni puntos
