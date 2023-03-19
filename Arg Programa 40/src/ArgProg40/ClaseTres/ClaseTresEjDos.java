@@ -5,9 +5,10 @@ public class ClaseTresEjDos {
        char aux[] = var.toLowerCase().toCharArray();
        char diccionario[] = " abcdefghijklmnñopqrstuvwxyz".toCharArray();
        String resultado="";
-       int factor = 0;
+
        //Character.isUpperCase()
        for (int i=0; i<aux.length; i++) {
+           int factor = 0;
            //busco la letra en dicccionario
            int ubicacion=0;
            boolean encontrado= false;
@@ -42,9 +43,10 @@ public class ClaseTresEjDos {
         char aux[] = var.toLowerCase().toCharArray();
         char diccionario[] = " abcdefghijklmnñopqrstuvwxyz".toCharArray();
         String resultado="";
-        int factor = 0;
+
         //Character.isUpperCase()
         for (int i=0; i<aux.length; i++) {
+            int factor = 0;
             //busco la letra en dicccionario
             int ubicacion=0;
             boolean encontrado= false;

@@ -227,6 +227,7 @@ class Producto {
 class itemCarrito {
     private int cantidad;
     private Producto itemProducto;
+    private float precioUnitario;
 
     public itemCarrito() {
     }
@@ -241,7 +242,9 @@ class itemCarrito {
     }
 
     public void setCantidad(int cantidad) {
+
         this.cantidad = cantidad;
+        this.precioUnitario = cantidad + this.itemProducto.getPrecio();
     }
 
     public Producto getItemProducto() {
@@ -251,6 +254,11 @@ class itemCarrito {
     public void setItemProducto(Producto itemProducto) {
         this.itemProducto = itemProducto;
     }
+
+    public float getPrecioUnitario() {
+        return precioUnitario;
+    }
+
 
     public float costoItemCarrito(){
         return cantidad* getItemProducto().getPrecio();
