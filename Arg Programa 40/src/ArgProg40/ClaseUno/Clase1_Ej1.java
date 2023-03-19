@@ -1,3 +1,4 @@
+package ArgProg40.ClaseUno;
 import java.util.Scanner;
 
 public class Clase1_Ej1 {

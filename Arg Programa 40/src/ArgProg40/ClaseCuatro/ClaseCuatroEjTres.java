@@ -1,3 +1,6 @@
+package ArgProg40.ClaseCuatro;
+
+import ArgProg40.CifradoDesplazamiento;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -34,7 +37,7 @@ public class ClaseCuatroEjTres {
                 String resultado[]= new String[cantidadLineas];
                 //CODIFICADO
                 for (int i = 0; i < texto.length; i++) {
-                    resultado[i]=CifradoDesplazamiento.codificador(texto[i],Integer.parseInt(args[1])) ;
+                    resultado[i]= CifradoDesplazamiento.codificador(texto[i],Integer.parseInt(args[1])) ;
                 }
                 //GRABA EN ARCHIVO SALIDA
                 Files.writeString(Paths.get(args[3]).toAbsolutePath(), resultado[0]+"\n");

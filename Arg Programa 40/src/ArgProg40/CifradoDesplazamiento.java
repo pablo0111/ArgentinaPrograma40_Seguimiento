@@ -1,3 +1,4 @@
+package ArgProg40;
 public class CifradoDesplazamiento {
 
     public static String decodificador(String var, int desplazamiento){

@@ -1,3 +1,6 @@
+package ArgProg40.ClaseCuatro;
+
+import ArgProg40.MiScanner;
 public class ClaseCuatroEjUnoItemC {
 
     public static int[] ordenAscendente(int[] vector) {

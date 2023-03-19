@@ -1,5 +1,4 @@
-import java.nio.file.Files;
-import java.nio.file.StandardOpenOption;
+package ArgProg40;
 import java.util.Scanner;
 
 public class MiScanner

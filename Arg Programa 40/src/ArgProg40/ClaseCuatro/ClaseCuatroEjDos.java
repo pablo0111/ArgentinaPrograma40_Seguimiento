@@ -1,8 +1,10 @@
-import java.io.File;
+package ArgProg40.ClaseCuatro;
+
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.nio.file.Path;
+
 
 
 public class ClaseCuatroEjDos {

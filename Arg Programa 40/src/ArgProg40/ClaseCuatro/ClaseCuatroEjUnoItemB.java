@@ -1,17 +1,20 @@
-public class ClaseCuatroEjUnoItemA {
-
+package ArgProg40.ClaseCuatro;
+import ArgProg40.MiScanner;
+public class ClaseCuatroEjUnoItemB {
     public static void main(String[] args) {
-        int vectorInicial[] =new int[args.length-1];
+
+
+        int vectorInicial[] =new int[3];
         char orden;
 
         //Carga de datos
-        for (int i = 0; i < args.length-1; i++) {
-            vectorInicial[i]= Integer.parseInt(args[i]) ;
+        System.out.println("A continuacion ingrese tres numeros enteros:");
+        for (int i = 0; i < 3; i++) {
+            vectorInicial[i]= MiScanner.leerInt() ;
         }
-        orden = args[args.length-1].charAt(0);
-
-        //si orden es cualquier letra, pongo 'a'scendente
-        if (orden!='a' && orden!='d') orden = 'a';
+        System.out.println("Ingrese 'a' para orden Ascendente o 'b' para orden Descendente");
+        char limitacion[]= {'a','d'};
+        orden = MiScanner.leerCaracter(limitacion);
 
 
         if (orden=='a') {
@@ -52,5 +55,7 @@ public class ClaseCuatroEjUnoItemA {
             System.out.println(vectorInicial[i]);
         }
 
+
     }
+
 }

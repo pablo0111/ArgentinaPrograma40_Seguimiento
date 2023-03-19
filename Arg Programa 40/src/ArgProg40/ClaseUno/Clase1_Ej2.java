@@ -1,3 +1,4 @@
+package ArgProg40.ClaseUno;
 public class Clase1_Ej2 {
     public static void main(String[] args) {
         //valores con los minimos requeridos en todas las variables de entrada

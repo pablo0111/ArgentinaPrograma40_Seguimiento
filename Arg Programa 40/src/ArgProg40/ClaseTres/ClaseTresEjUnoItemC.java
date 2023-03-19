@@ -1,3 +1,4 @@
+package ArgProg40.ClaseTres;
 public class ClaseTresEjUnoItemC {
     public static void main(String[] args) {
         int vectorNumerico[] = {1,11,16,55,63,44,31,10,81,4,77,24,18,14,20,27,45,22,23,2};
