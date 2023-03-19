@@ -1,9 +1,12 @@
 package ArgProg40.ClaseCinco;
 
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
+import ArgProg40.ClaseSiete.*;
+
 
 public class ClaseCinco {
     public static void main(String[] args) throws IOException {
@@ -75,52 +78,7 @@ public class ClaseCinco {
 }
 
 
-class Persona {
-    private String nombre;
-    private String apellido;
-    private LocalDateTime fechadeNacimiento;
-
-    public Persona() {
-
-    }
-    public Persona(String nombre, String apellido, LocalDateTime fechadeNacimiento) {
-        this.setNombre(nombre);
-        this.setApellido(apellido);
-        this.fechadeNacimiento = fechadeNacimiento;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre.toUpperCase().charAt(0) + nombre.substring(1, nombre.length()).toLowerCase();
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido.toUpperCase().charAt(0) + apellido.substring(1, apellido.length()).toLowerCase();
-
-    }
-
-    public LocalDateTime getFechadeNacimiento() {
-        return fechadeNacimiento;
-    }
-
-    public void setFechadeNacimiento(LocalDateTime fechadeNacimiento) {
-        this.fechadeNacimiento = fechadeNacimiento;
-    }
-
-    @Override
-    public String toString() {
-        return nombre + " " + apellido;
-    }
-}
-
-class Descuento {
+/*class Descuento {
     private float porcentaje;
     private  boolean acumulable;
 
@@ -185,168 +143,8 @@ class DescuentoTienda extends Descuento{
     public void setTope(float tope) {
         this.tope = tope;
     }
-}
+}*/
 
-class Producto {
-    private String descipcion;
-    private float precio;
-
-    public Producto() {
-
-    }
-    public Producto(String descipcion, float precio) {
-        this.descipcion = descipcion;
-        this.precio = precio;
-    }
-
-    public String getDescipcion() {
-        return descipcion;
-    }
-
-    public void setDescipcion(String descipcion) {
-        this.descipcion = descipcion;
-    }
-
-    public float getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(float precio) {
-        this.precio = precio;
-    }
-
-    @Override
-    public String toString() {
-        return "Descipcion='" + descipcion + '\'' +
-                ", Precio=" + precio ;
-    }
-    
-
-}
-
-class itemCarrito {
-    private int cantidad;
-    private Producto itemProducto;
-    private float precioUnitario;
-
-    public itemCarrito() {
-    }
-
-    public itemCarrito(int cantidad, Producto itemProducto) {
-        this.cantidad = cantidad;
-        this.itemProducto = itemProducto;
-    }
-
-    public int getCantidad() {
-        return cantidad;
-    }
-
-    public void setCantidad(int cantidad) {
-
-        this.cantidad = cantidad;
-        this.precioUnitario = cantidad + this.itemProducto.getPrecio();
-    }
-
-    public Producto getItemProducto() {
-        return itemProducto;
-    }
-
-    public void setItemProducto(Producto itemProducto) {
-        this.itemProducto = itemProducto;
-    }
-
-    public float getPrecioUnitario() {
-        return precioUnitario;
-    }
+//REDEFINO CLASES DESCUENTOS en ARCHIVO SEPARADO PACKAGE CLASESIETE
 
 
-    public float costoItemCarrito(){
-        return cantidad* getItemProducto().getPrecio();
-    }
-
-    @Override
-    public String toString() {
-        return "itemCarrito{" +
-                "cantidad=" + cantidad +
-                ", itemProducto=" + itemProducto.getDescipcion()+ " precio" + itemProducto.getPrecio()+
-                '}';
-    }
-}
-
-class carrito{
-    private itemCarrito item1;
-    private itemCarrito item2;
-    private itemCarrito item3;
-    private Persona cliente;
-    private DescuentoBanco descuentoBanco;
-    private DescuentoTienda descuentoTienda;
-
-    public carrito() {
-    }
-
-    public carrito(Persona cliente) {
-        this.cliente = cliente;
-    }
-
-    public itemCarrito getItem1() {
-        return item1;
-    }
-
-    public void setItem1(itemCarrito item1) {
-        this.item1 = item1;
-    }
-
-    public itemCarrito getItem2() {
-        return item2;
-    }
-
-    public void setItem2(itemCarrito item2) {
-        this.item2 = item2;
-    }
-
-    public itemCarrito getItem3() {
-        return item3;
-    }
-
-    public void setItem3(itemCarrito item3) {
-        this.item3 = item3;
-    }
-
-    public Persona getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(Persona cliente) {
-        this.cliente = cliente;
-    }
-
-    public DescuentoBanco getDescuentoBanco() {
-        return descuentoBanco;
-    }
-
-    public void setDescuentoBanco(DescuentoBanco descuentoBanco) {
-        this.descuentoBanco = descuentoBanco;
-    }
-
-    public DescuentoTienda getDescuentoTienda() {
-        return descuentoTienda;
-    }
-
-    public void setDescuentoTienda(DescuentoTienda descuentoTienda) {
-        this.descuentoTienda = descuentoTienda;
-    }
-
-
-    public float precio(){
-        float precio1=0;
-        float precio2=0;
-        float precio3=0;
-        if (item1!=null) precio1=item1.costoItemCarrito();
-        if (item2!=null) precio2=item2.costoItemCarrito();
-        if (item3!=null) precio3=item3.costoItemCarrito();
-
-        return precio1+precio2+precio3;
-
-    }
-
-}
