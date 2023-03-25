@@ -1,7 +1,7 @@
 
 import ArgProg40.ClaseCinco.Producto;
-import ArgProg40.ClaseCinco.carrito;
-import ArgProg40.ClaseCinco.itemCarrito;
+import ArgProg40.ClaseCinco.Carrito;
+import ArgProg40.ClaseCinco.ItemCarrito;
 import ArgProg40.ClaseCinco.Persona;
 import org.junit.Assert;
 import org.junit.Test;
@@ -63,9 +63,9 @@ public class testDescuentos {
         LocalDateTime nacimiento = LocalDateTime.of(1980,1,1,7,24);
         Producto producto1;
         Producto producto2;
-        itemCarrito itemCarrito1;
-        itemCarrito itemCarrito2;
-        carrito unCarrito;
+        ItemCarrito itemCarrito1;
+        ItemCarrito itemCarrito2;
+        Carrito unCarrito;
 
         //creo una persona para el carrito
         persona = new Persona("HarRy","pottER",nacimiento);
@@ -77,13 +77,13 @@ public class testDescuentos {
         producto2= new Producto("Parlantes", 4899.99f);
         producto2.setDescuentoPorcentajeConTope(15f, 500);
         //Creo un item carrito1
-        itemCarrito1= new itemCarrito(1,producto1);
+        itemCarrito1= new ItemCarrito(1,producto1);
 
         //Creo un item carrito2
-        itemCarrito2= new itemCarrito(2,producto2);
+        itemCarrito2= new ItemCarrito(2,producto2);
 
         //Creo un carrito y le agrego los dos items
-        unCarrito= new carrito(persona);
+        unCarrito= new Carrito(persona);
         unCarrito.setItem1(itemCarrito1);
         unCarrito.setItem2(itemCarrito2);
 

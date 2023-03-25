@@ -1,16 +1,16 @@
 package ArgProg40.ClaseCinco;
 
-public class itemCarrito {
+public class ItemCarrito {
     private int cantidad;
     private Producto itemProducto;
     private float precioUnitario;
 
 
-    public itemCarrito() {
+    public ItemCarrito() {
 
     }
 
-    public itemCarrito(int cantidad, Producto itemProducto) {
+    public ItemCarrito(int cantidad, Producto itemProducto) {
         this.cantidad = cantidad;
         this.itemProducto = itemProducto;
         this.precioUnitario = cantidad * this.itemProducto.getPrecio();

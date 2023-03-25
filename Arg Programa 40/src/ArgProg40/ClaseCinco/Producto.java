@@ -15,8 +15,10 @@ public class Producto {
     }
 
     public Producto(String descipcion, float precio) {
-        this.descipcion = descipcion;
-        this.precio = precio;
+
+        this.setDescipcion(descipcion);
+        this.setPrecio(precio);
+
     }
 
 

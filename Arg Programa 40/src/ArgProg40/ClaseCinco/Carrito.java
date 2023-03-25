@@ -1,41 +1,41 @@
 package ArgProg40.ClaseCinco;
 
-public class carrito {
-    private itemCarrito item1;
-    private itemCarrito item2;
-    private itemCarrito item3;
+public class Carrito {
+    private ItemCarrito item1;
+    private ItemCarrito item2;
+    private ItemCarrito item3;
     private Persona cliente;
 /*    private DescuentoBanco descuentoBanco;
     private DescuentoTienda descuentoTienda;*/
 
-    public carrito() {
+    public Carrito() {
     }
 
-    public carrito(Persona cliente) {
+    public Carrito(Persona cliente) {
         this.cliente = cliente;
     }
 
-    public itemCarrito getItem1() {
+    public ItemCarrito getItem1() {
         return item1;
     }
 
-    public void setItem1(itemCarrito item1) {
+    public void setItem1(ItemCarrito item1) {
         this.item1 = item1;
     }
 
-    public itemCarrito getItem2() {
+    public ItemCarrito getItem2() {
         return item2;
     }
 
-    public void setItem2(itemCarrito item2) {
+    public void setItem2(ItemCarrito item2) {
         this.item2 = item2;
     }
 
-    public itemCarrito getItem3() {
+    public ItemCarrito getItem3() {
         return item3;
     }
 
-    public void setItem3(itemCarrito item3) {
+    public void setItem3(ItemCarrito item3) {
         this.item3 = item3;
     }
 

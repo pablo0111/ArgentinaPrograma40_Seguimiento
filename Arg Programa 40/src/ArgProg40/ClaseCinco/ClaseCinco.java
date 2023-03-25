@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
-import ArgProg40.ClaseSiete.*;
 
 
 public class ClaseCinco {
@@ -14,9 +13,9 @@ public class ClaseCinco {
         LocalDateTime nacimiento = LocalDateTime.of(1980,1,1,7,24);
         Producto producto1;
         Producto producto2;
-        itemCarrito itemCarrito1;
-        itemCarrito itemCarrito2;
-        carrito unCarrito;
+        ItemCarrito itemCarrito1;
+        ItemCarrito itemCarrito2;
+        Carrito unCarrito;
 
         //PUNTO 1
         System.out.println("Creo una persona");
@@ -32,15 +31,15 @@ public class ClaseCinco {
         System.out.println("Producto2 creado como :" + producto2.toString());
 
         System.out.println("Creo un item Carrito");
-        itemCarrito1= new itemCarrito(2,producto1);
+        itemCarrito1= new ItemCarrito(2,producto1);
         System.out.println("item carrito 1 "+ itemCarrito1.toString());
 
         System.out.println("Creo un item Carrito");
-        itemCarrito2= new itemCarrito(2,producto2);
+        itemCarrito2= new ItemCarrito(2,producto2);
         System.out.println("item carrito 1 "+ itemCarrito2.toString());
 
         System.out.println("Creo un carrito");
-        unCarrito= new carrito(persona);
+        unCarrito= new Carrito(persona);
         System.out.println("Agrego itemCarrito1");
         unCarrito.setItem1(itemCarrito1);
         System.out.println("Agregue producto1 , costo carrito:" + unCarrito.precio());
@@ -51,13 +50,13 @@ public class ClaseCinco {
 
         //PUNTO 2
         int contador=0;
-        itemCarrito arrayItemCarrito[] = new itemCarrito[3];
+        ItemCarrito arrayItemCarrito[] = new ItemCarrito[3];
         for (String linea : Files.readAllLines(Paths.get(".\\Carrito.txt").toAbsolutePath())){
             String arr[]= linea.split(",");
-            arrayItemCarrito[contador] = new itemCarrito(Integer.parseInt(arr[0]), new Producto(arr[2],Float.parseFloat(arr[1])));
+            arrayItemCarrito[contador] = new ItemCarrito(Integer.parseInt(arr[0]), new Producto(arr[2],Float.parseFloat(arr[1])));
             contador++;
         }
-        carrito otroCarrito = new carrito(persona);
+        Carrito otroCarrito = new Carrito(persona);
         otroCarrito.setItem1(arrayItemCarrito[0]);
         otroCarrito.setItem2(arrayItemCarrito[1]);
         otroCarrito.setItem3(arrayItemCarrito[2]);
