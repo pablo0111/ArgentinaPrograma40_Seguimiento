@@ -1,5 +1,6 @@
 package ArgProg40.ClaseCinco;
 
+import ArgProg40.ClaseOcho.DescuentoNegativoException;
 import ArgProg40.ClaseSiete.Descuento;
 import ArgProg40.ClaseSiete.DescuentoFijo;
 import ArgProg40.ClaseSiete.DescuentoPorcentaje;
@@ -42,20 +43,30 @@ public class Producto {
     }
 
 
-    public void setDescuentoFijo(float valor) {
+    public void setDescuentoFijo(float valor) throws DescuentoNegativoException {
         this.descuentoProducto = new DescuentoFijo();
-        this.descuentoProducto.setValor(valor);
+        if (valor< this.getPrecio()) {
+            this.descuentoProducto.setValor(valor);
+        } else throw new DescuentoNegativoException(this);
+
 
     }
 
-    public void setDescuentoPorcentaje(float valor) {
+    public void setDescuentoPorcentaje (float valor) throws DescuentoNegativoException {
         this.descuentoProducto = new DescuentoPorcentaje();
-        this.descuentoProducto.setValor(valor);
+        if (valor < 100) {
+            this.descuentoProducto.setValor(valor);
+        } else throw new DescuentoNegativoException(this);
+
     }
 
-    public void setDescuentoPorcentajeConTope(float valor, float tope) {
+    public void setDescuentoPorcentajeConTope(float valor, float tope) throws DescuentoNegativoException {
         this.descuentoProducto = new DescuentoPorcentajeConTope(tope);
         this.descuentoProducto.setValor(valor);
+        if (this.descuentoProducto.valorFinal(this.precio) == 0) {
+            this.descuentoProducto = null;
+            throw new DescuentoNegativoException(this);
+        }
     }
 
     public String getTipoDescuento() {
@@ -84,7 +95,7 @@ public class Producto {
     @Override
     public String toString() {
         return "Descipcion= '" + descipcion + '\'' +
-                ", Precio= " + precio;
+                ", Precio= " + this.getPrecio();
     }
 
 

@@ -3,6 +3,7 @@ import ArgProg40.ClaseCinco.Producto;
 import ArgProg40.ClaseCinco.Carrito;
 import ArgProg40.ClaseCinco.ItemCarrito;
 import ArgProg40.ClaseCinco.Persona;
+import ArgProg40.ClaseOcho.DescuentoNegativoException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -22,7 +23,7 @@ public class testDescuentos {
     }
 
     @Test
-    public void casoDePrueba2(){
+    public void casoDePrueba2() throws DescuentoNegativoException {
         //PRUEBA PARA SABER QUE UN PRODUCTO NO TIENE DESCUENTOS ASIGNADOS
         Producto producto1;
         //creo un producto
@@ -35,7 +36,7 @@ public class testDescuentos {
     }
 
     @Test
-    public void casoDePrueba3(){
+    public void casoDePrueba3() throws DescuentoNegativoException {
 
         Producto producto1;
         Producto producto2;
@@ -58,7 +59,7 @@ public class testDescuentos {
     }
 
     @Test
-    public void casoDePrueba4(){
+    public void casoDePrueba4() throws DescuentoNegativoException {
         Persona persona;
         LocalDateTime nacimiento = LocalDateTime.of(1980,1,1,7,24);
         Producto producto1;
@@ -92,7 +93,7 @@ public class testDescuentos {
 
     }
     @Test
-    public void casoDePrueba5(){
+    public void casoDePrueba5() throws DescuentoNegativoException {
         Producto producto1;
 
         //Creo un producto
@@ -105,7 +106,7 @@ public class testDescuentos {
     }
 
     @Test
-    public void casoDePrueba6(){
+    public void casoDePrueba6() throws DescuentoNegativoException {
         Producto producto1;
 
         //Creo un producto

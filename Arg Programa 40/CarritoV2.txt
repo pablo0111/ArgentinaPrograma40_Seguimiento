@@ -1,0 +1,15 @@
+1,40,jabón en polvo
+3,10,esponjas
+2,100,chocolates
+1,14,jabón en liquido
+1,18,esponjas mejoradas
+1,200,chocolates caros
+6,25,jamon
+3,30,caramelos
+7,115,harina
+2,35,pan
+1,32,pilas
+1,100,coca-cola
+8,40,queso
+6,10,bolsa
+0,100,item fantasma

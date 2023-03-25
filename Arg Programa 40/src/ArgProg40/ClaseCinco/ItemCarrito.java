@@ -11,9 +11,9 @@ public class ItemCarrito {
     }
 
     public ItemCarrito(int cantidad, Producto itemProducto) {
-        this.cantidad = cantidad;
-        this.itemProducto = itemProducto;
-        this.precioUnitario = cantidad * this.itemProducto.getPrecio();
+        this.setItemProducto(itemProducto);
+        this.setCantidad(cantidad);
+        //actualicé para que primero asigne el producto y luego haga el set de la cantidad, y allí se calcula el precio unitario
     }
 
     public int getCantidad() {
